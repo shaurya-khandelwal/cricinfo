@@ -39,16 +39,16 @@ def main(match_id="1237181"):
     df.to_csv("{}.csv".format(match_id), sep="\t")
 
 
-def get_season_data(season_name="ipl-2020-21-1210595"):
-    url = "https://www.espncricinfo.com/series/{}/match-results".format(
-        season_name)
-    response = requests.get(url)
-    print(response.json())
-    with open("season_{}.json".format(season_name), "w+") as f:
-        json.dump(response.json(), f)
+#def get_season_data(season_name="ipl-2020-21-1210595"):
+  #  url = "https://www.espncricinfo.com/series/{}/match-results".format(
+   #     season_name)
+    #response = requests.get(url)
+    #print(response.json())
+    #with open("season_{}.json".format(season_name), "w+") as f:
+     #   json.dump(response.json(), f)
 
 
 if __name__ == "__main__":
-    # get_match_data()
-    # main()
-    get_season_data()
+     get_match_data()
+     main()
+    #get_season_data()
