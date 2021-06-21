@@ -1,24 +1,23 @@
 import requests
 import pandas as pd
 import json
+from bs4 import BeautifulSoup
+import os
 
 
 def get_match_data(match_id="1237181"):
     url = "https://www.espncricinfo.com/matches/engine/match/{}.json".format(
         match_id)
     response = requests.get(url)
-    # print(response.json())
-    with open("match_{}.json".format(match_id), "w+") as f:
+    with open("match_json/match_{}.json".format(match_id), "w+") as f:
         json.dump(response.json(), f)
 
 
-def main(match_id="1237181"):
-    with open("match_{}.json".format(match_id), "r") as f:
+def match_to_csv(match_id="1237181"):
+    with open("match_json/match_{}.json".format(match_id), "r") as f:
         data = json.load(f)
-    # print(data["team"])
     rows = []
     for team in data["team"]:
-        # print(team["team_id"])
         for player in team["player"]:
             rows.append({
                 "match_id": match_id,
@@ -36,19 +35,34 @@ def main(match_id="1237181"):
             })
 
     df = pd.DataFrame(rows)
-    df.to_csv("{}.csv".format(match_id), sep="\t")
+    df.to_csv("match_csv/{}.csv".format(match_id), sep="\t")
 
 
-#def get_season_data(season_name="ipl-2020-21-1210595"):
-  #  url = "https://www.espncricinfo.com/series/{}/match-results".format(
-   #     season_name)
-    #response = requests.get(url)
-    #print(response.json())
-    #with open("season_{}.json".format(season_name), "w+") as f:
-     #   json.dump(response.json(), f)
+def get_matches_in_season(season_name="ipl-2020-21-1210595"):
+    match_ids = []
+    url = "https://www.espncricinfo.com/series/{}/match-results".format(
+        season_name)
+    soup = BeautifulSoup(requests.get(url).text, "html.parser")
+    for a in soup.find_all("a", {"class": "match-info-link-FIXTURES"}):
+        print("match_id : ", a["href"].split("/")[-2].split("-")[-1])
+        match_ids.append(a["href"].split("/")[-2].split("-")[-1])
+    return match_ids
+
+
+def get_season_data(season_name="ipl-2020-21-1210595"):
+    match_ids = get_matches_in_season(season_name)
+    for match_id in match_ids:
+        get_match_data(match_id)
+        match_to_csv(match_id)
 
 
 if __name__ == "__main__":
-     get_match_data()
-     main()
-    #get_season_data()
+    if not os.path.exists("match_csv"):
+        os.makedirs("match_csv")
+
+    if not os.path.exists("match_json"):
+        os.makedirs("match_json")
+
+    # get_match_data()
+    # main()
+    get_season_data()
