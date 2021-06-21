@@ -1,0 +1,23 @@
+	match_id	date	ground_id	home_team_id	home_team_name	away_team_id	away_team_name	player_name	player_id	team_id	bowling_style	batting_style
+0	1237181	2020-11-10	2439	0	Delhi Capitals	0	Mumbai Indians	Marcus Stoinis	54212	4344	rm	rhb
+1	1237181	2020-11-10	2439	0	Delhi Capitals	0	Mumbai Indians	Shikhar Dhawan	15887	4344	ob	lhb
+2	1237181	2020-11-10	2439	0	Delhi Capitals	0	Mumbai Indians	Ajinkya Rahane	51096	4344	rm	rhb
+3	1237181	2020-11-10	2439	0	Delhi Capitals	0	Mumbai Indians	Shreyas Iyer	71331	4344	lbg	rhb
+4	1237181	2020-11-10	2439	0	Delhi Capitals	0	Mumbai Indians	Rishabh Pant	86165	4344		lhb
+5	1237181	2020-11-10	2439	0	Delhi Capitals	0	Mumbai Indians	Shimron Hetmyer	72393	4344		lhb
+6	1237181	2020-11-10	2439	0	Delhi Capitals	0	Mumbai Indians	Axar Patel	67455	4344	sla	lhb
+7	1237181	2020-11-10	2439	0	Delhi Capitals	0	Mumbai Indians	Kagiso Rabada	67296	4344	rf	lhb
+8	1237181	2020-11-10	2439	0	Delhi Capitals	0	Mumbai Indians	Praveen Dubey	77821	4344	lbg	rhb
+9	1237181	2020-11-10	2439	0	Delhi Capitals	0	Mumbai Indians	Ravichandran Ashwin	12894	4344	ob	rhb
+10	1237181	2020-11-10	2439	0	Delhi Capitals	0	Mumbai Indians	Anrich Nortje	63651	4344	rf	rhb
+11	1237181	2020-11-10	2439	0	Delhi Capitals	0	Mumbai Indians	Rohit Sharma	48405	4346	ob	rhb
+12	1237181	2020-11-10	2439	0	Delhi Capitals	0	Mumbai Indians	Quinton de Kock	58406	4346		lhb
+13	1237181	2020-11-10	2439	0	Delhi Capitals	0	Mumbai Indians	Suryakumar Yadav	61990	4346	rm/ob	rhb
+14	1237181	2020-11-10	2439	0	Delhi Capitals	0	Mumbai Indians	Ishan Kishan	75325	4346		lhb
+15	1237181	2020-11-10	2439	0	Delhi Capitals	0	Mumbai Indians	Kieron Pollard	49040	4346	rm	rhb
+16	1237181	2020-11-10	2439	0	Delhi Capitals	0	Mumbai Indians	Hardik Pandya	70633	4346	rmf	rhb
+17	1237181	2020-11-10	2439	0	Delhi Capitals	0	Mumbai Indians	Krunal Pandya	63224	4346	sla	lhb
+18	1237181	2020-11-10	2439	0	Delhi Capitals	0	Mumbai Indians	Jayant Yadav	62051	4346	ob	rhb
+19	1237181	2020-11-10	2439	0	Delhi Capitals	0	Mumbai Indians	Nathan Coulter-Nile	49958	4346	rf	rhb
+20	1237181	2020-11-10	2439	0	Delhi Capitals	0	Mumbai Indians	Trent Boult	51092	4346	lfm	rhb
+21	1237181	2020-11-10	2439	0	Delhi Capitals	0	Mumbai Indians	Jasprit Bumrah	70640	4346	rf	rhb
